@@ -1,0 +1,27 @@
+This is demo app reading mozilla browsing histories.
+
+I am using mongodb and mongoid mapper for storing database,
+
+Also i am using  beanstalked for background job (stalker gem).
+
+Requirement
+
+Mongodb to be installed and run on default port 27017
+If any address changed update browsing_history.rb
+MoreInfo visit http://mongodb.org,http://mongoid.org
+
+Benstalked to be installed for background processing
+MoreInfo visit https://github.com/kr/beanstalkd/
+
+I am using stalker gem to place job in queue
+MoreInfo visit https://github.com/adamwiggins/stalker
+
+
+Now do follwing steps
+ start mongodb
+ start beanstalked
+ run stalk job.rb
+ run ruby client.rb update file path by providing mozilla file path
+ run ruby browsing_history.rb -p 4567
+ go to http://localhost:4567/
+
